@@ -36,6 +36,7 @@ function App() {
     { id: 5, name: "Ajith", attendance:null},
     { id: 6, name: "Vijay", attendance:null},
     { id: 7, name: "Ram", attendance:null},
+    
   ]);
 
   const markAttendance = (id, status) => {
@@ -51,7 +52,7 @@ function App() {
         <div>
           {/* <Link to={'Gmaila'} >Gmail</Link> */}
           {/* <Link to={'Password'} >Password</Link> */}
-          <h1>Student Attendance </h1>
+          <h1 className="head">Student Attendance </h1>
       <StudentList students={students} />
 <AttendanceForm students={students} markAttendance={markAttendance} />
 <AttendanceReport students={students} />
@@ -64,7 +65,7 @@ function App() {
         <Route path='Gmaila' Component={Gmaila}>
        
           <Route path='Password' Component={Password}/>
-          <Route path='Sidebar' Component={Sidebar}/>
+          <Route path='Sidebar' Component={Sidebar}/> 
          <Route path='Inbox' Component={Inbox}/>
         </Route>
         
