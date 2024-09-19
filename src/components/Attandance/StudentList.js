@@ -1,5 +1,5 @@
 import React from "react";
-function StudentList({ students }) {
+export function StudentList({ students }) {
     return (
       <div>
         <h2>Students</h2>
@@ -12,5 +12,4 @@ function StudentList({ students }) {
     );
   }
   
-  export default StudentList;
   

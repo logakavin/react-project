@@ -1,8 +1,9 @@
 import "./App.css";
-import React,{ useState} from "react";
-import StudentList from "./components/Attandance/StudentList"
-import AttendanceForm from "./components/Attandance/AttendanceForm";
-import AttendanceReport from "./components/Attandance/AttendanceReport";
+import MainAttendance from "./components/Attandance/MainAttendance";
+// import React,{ useState} from "react";
+// import StudentList from "./components/Attandance/StudentList"
+// import AttendanceForm from "./components/Attandance/AttendanceForm";
+// import AttendanceReport from "./components/Attandance/AttendanceReport";
 
 
 // import CounterApp from "./components/Redux/CounterApp";
@@ -28,22 +29,22 @@ import AttendanceReport from "./components/Attandance/AttendanceReport";
 
 function App() {
 
-  const [students, setStudents] = useState([
-    { id: 1, name: "Loga", attendance: null },
-    { id: 2, name: "Kavin", attendance: null },
-    { id: 3, name: "Akil", attendance: null },
-    { id: 4, name: "Gowtham", attendance:null},
-    { id: 5, name: "Ajith", attendance:null},
-    { id: 6, name: "Vijay", attendance:null},
-    { id: 7, name: "Ram", attendance:null},
-    
-  ]);
+  // const [students, setStudents] = useState([
+  //   { id: 1, name: "Loga", attendance: null },
+  //   { id: 2, name: "Kavin", attendance: null },
+  //   { id: 3, name: "Akil", attendance: null },
+  //   { id: 4, name: "Gowtham", attendance:null},
+  //   { id: 5, name: "Ajith", attendance:null},
+  //   { id: 6, name: "Vijay", attendance:null},
+  //   { id: 7, name: "Ram", attendance:null},
 
-  const markAttendance = (id, status) => {
-    setStudents(students.map(student =>
-      student.id === id ? { ...student, attendance: status } : student
-    ));
-  };
+  // ]);
+
+  // const markAttendance = (id, status) => {
+  //   setStudents(students.map(student =>
+  //     student.id === id ? { ...student, attendance: status } : student
+  //   ));
+  // };
 
 
   return (
@@ -52,11 +53,11 @@ function App() {
         <div>
           {/* <Link to={'Gmaila'} >Gmail</Link> */}
           {/* <Link to={'Password'} >Password</Link> */}
-          <h1 className="head">Student Attendance </h1>
+{/* <h1 className="head">Student Attendance </h1>
       <StudentList students={students} />
 <AttendanceForm students={students} markAttendance={markAttendance} />
 <AttendanceReport students={students} />
-
+           */}
         </div>
       </header>
 
@@ -89,6 +90,7 @@ function App() {
       {/* <Certificate1/> */}
         {/* <CustomHook /> */}
       {/* <Register/> */}
+      <MainAttendance/>
 
     </div>
 );

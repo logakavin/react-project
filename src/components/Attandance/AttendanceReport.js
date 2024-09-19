@@ -1,5 +1,6 @@
 import React from "react";
-function AttendanceReport({ students }) {
+
+export function AttendanceReport({ students }) {
     return (
       <div>
         <h2>Attendance Report</h2>
@@ -14,5 +15,4 @@ function AttendanceReport({ students }) {
     );
   }
   
-  export default AttendanceReport;
   
