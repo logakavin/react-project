@@ -2,6 +2,7 @@ import React,{ useState} from 'react'
 import { StudentList } from './StudentList';
 import { AttendanceForm } from './AttendanceForm';
 import { AttendanceReport } from './AttendanceReport';
+import "./Attendance.css";
 
 
 export default function MainAttendance() {
@@ -23,12 +24,19 @@ export default function MainAttendance() {
       };
     
   return (
-    <div>
-        <h1 className="head">Student Attendance </h1>
+    <div className='main'>
+        <h1 className="head">Online Student Attendance </h1>
+        
+        <form>
+          <label htmlFor="text">Date</label>
+          <input type="date" name="" id=""></input>
+        </form>
+        
       <StudentList students={students} />
 <AttendanceForm students={students} markAttendance={markAttendance} />
-<AttendanceReport students={students} />
-          
-    </div>
-  )
+<AttendanceReport students={students} />  
+
+      
+</div>
+)
 }
