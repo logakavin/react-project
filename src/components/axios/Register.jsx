@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Register() {
-  const API = "https://66c57672134eb8f434946316.mockapi.io/api";
+  const API = "https://mockapi.io/projects/66c57672134eb8f434946316";
   const [name, setname] = useState("");
   const [age, setage] = useState("");
   const [email, setemail] = useState("");
@@ -93,7 +93,7 @@ export default function Register() {
         value={email}
         onChange={(e) => setemail(e.target.value)}
       />
-      
+      <button onClick={Send}>send</button>
        <button > 
         {
           edit ? 
@@ -128,6 +128,15 @@ export default function Register() {
                         handleDelete(item.id);
                       }}
                     >Delete</button>
+
+
+                    <button onClick={()=>{
+                      handleupdate(item.id);
+                    }}>Update</button>
+
+
+        
+
                   </td>
                 </tr>
               )

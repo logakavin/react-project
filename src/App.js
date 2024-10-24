@@ -1,4 +1,5 @@
 import "./App.css";
+import FileUploadForm from "./components/FileUploadForm";
 // import MainAttendance from "./components/Attandance/MainAttendance";
 // import Port1 from "./components/Portfolio/Port1";
 // import React,{ useState} from "react";
@@ -13,6 +14,7 @@ import "./App.css";
 // import Card from "./components/Task/Card";
 // import UseMemoHook from "./components/Hooks/UseMemoHook";
 // import { Navigate, Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 // import Gmaila from './components/Gmail/Gmaila';
 // import Password from './components/Gmail/Password';
@@ -21,12 +23,16 @@ import "./App.css";
 // import UseStateHook from './components/Hooks/UseStateHook';
 // import Certificate1 from "./components/Certificate/Certificate1";
 // import Register from "./components/axios/Register";
-import UseEffectHook from "./components/Hooks/UseEffectHook";
+// import UseEffectHook from "./components/Hooks/UseEffectHook";
 // import UseReducerHook from "./components/Hooks/UseReducerHook";
 // import UseReducerHook1 from "./components/Hooks/UseReducerHook1";
 // import UseRefHook from './components/Hooks/UseRefHook';
 // import Usecontexthook from './components/Hooks/Usecontexthook';
 // import UseStateHook from './components/Hooks/UseStateHook';
+// import Form from "./components/Form";
+
+import Carosel from "./components/Carosel";
+
 
 function App() {
 
@@ -80,7 +86,7 @@ function App() {
       {/* <UseRefHook /> */}
       {/* <UseStateHook /> */}
       {/* <Usecontexthook></Usecontexthook> */}
-      <UseEffectHook />
+      {/* <UseEffectHook /> */}
       {/* <UseReducerHook /> */}
       {/* <UseReducerHook1/> */}
       {/* <UseCallBackHook /> */}
@@ -90,10 +96,16 @@ function App() {
       {/* <UseMemoHook /> */}
       {/* <Certificate1/> */}
         {/* <CustomHook /> */}
-      {/* <Register/> */}
+       {/*<Register/>*/}
       {/* <MainAttendance/> */}
       {/* <Port1 /> */}
-
+{/* <Form/> */}
+{/* <FileUploadForm/> */}
+{/* <Carosel/> */}
+        <Routes>
+          <Route path="/" element={<FileUploadForm/>}/>
+          <Route path="/home" element={<Carosel/>}/>
+        </Routes>
     </div>
 );
 }  
